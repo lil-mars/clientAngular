@@ -1,0 +1,23 @@
+<h2>employee works!</h2>
+<div class="container">
+  <app-person></app-person>
+  <div class="form-group">
+
+    <label for="name">Salary</label>
+    <input class="form-control" type="number" [(ngModel)]="employee.salary" name="name" id="name">
+  </div>
+  <div class="form-group">
+    <label for="lifeInsurance">Life insurance</label>
+    <input class="form-control" [(ngModel)]="employee.lifeInsurance"  name="lifeInsurance" id="lifeInsurance">
+  </div>
+  <button (click)="saveEmployee()" class="btn btn-primary">Guardar</button>
+
+  <div>
+    <table class="table table-bordered">
+      <tr *ngFor="let employee of employeeList">
+        <td>{{employee.salary }}</td>
+        <td>{{employee.lifeInsurance }}</td>
+      </tr>
+    </table>
+  </div>
+</div>
